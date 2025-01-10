@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions - Example 2</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+
+    </div>
+
+    <script>
+      // first rule: JS objects are associative arrays
+      var customer = new Object();
+      customer.name = "arron";
+      customer.email = "arron_ferguson@bcit.ca";
+      //console.log(customer);
+
+      // 2nd rule: 3 different notations for JS objects
+      customer.age = 29 // dot notation
+      customer['age'] = 29 // array notation
+      // also do JSON notation
+      customer = {name: "arron"};
+
+      // 3rd rule to JS is that functions are objects
+      let addition = function(a, b) { return a + b; }
+
+      // 4th rule is that b/c JS functions are objects
+      // they are also first class citiznes (i.e., passed as arguments)
+
+      function sum() {
+//        console.log("the arguments property of a function", arguments)
+        let total = 0;
+        for(let i = 0; i < arguments.length; i++) {
+          total += arguments[i];
+        }
+        console.log("the sume is:", total)
+      }
+
+      sum(1, 3, 5);
+      sum(1);
+      sum();
+
+    </script>
+
+  </body>
+</html>

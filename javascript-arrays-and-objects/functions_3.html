@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions - Example 3</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <p id="p1">Something to be replaced.</p>
+      <p id="p2">Something to be replaced.</p>
+    </div>
+
+    <script>
+        /*<![CDATA[*/
+        // http://stackoverflow.com/questions/1634268/explain-javascripts-encapsulated-anonymous-function-syntax
+        // http://stackoverflow.com/questions/9053842/advanced-javascript-why-is-this-function-wrapped-in-parentheses
+        // http://markdalgleish.com/2011/03/self-executing-anonymous-functions
+        // http://helephant.com/2008/08/23/javascript-anonymous-functions/
+
+        // formatted for readability - normally it's all on one line which can be hard to read
+        (
+            function(){
+                document.getElementById("p1").innerHTML = "Replaced!"
+            }()
+        );
+        /*
+           What the above does:
+           - creates an anonymous function (that has executable instructions inside of it)
+             that is in the form of a function expression
+           - has a set of parenthesis tacked on at the end so as to execute it immediately
+           - paranthesis on the outside so as to allow it to be executed
+         */
+
+         // again, this time let's access some variables
+         var x = 2;
+         var y = 3;
+
+         (function(){ document.getElementById("p2").innerHTML = x + y}());
+
+         // notice that the global variables can be access inside of the function?
+        /*]]>*/
+    </script>
+
+  </body>
+</html>

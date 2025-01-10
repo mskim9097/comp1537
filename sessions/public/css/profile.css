@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'comfortaaregular';
+    src: url('/fonts/comfortaa-variablefont_wght-webfont.eot');
+    src: url('/fonts/comfortaa-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/comfortaa-variablefont_wght-webfont.woff2') format('woff2'),
+         url('/fonts/comfortaa-variablefont_wght-webfont.woff') format('woff'),
+         url('/fonts/comfortaa-variablefont_wght-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: "comfortaaregular";
+  font-size: 18pt;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  background-color: black;
+}
+
+/*
+ * Next part is a little non-standard (as in specific to browsers)
+ * Original code here:
+ *   https://www.digitalocean.com/community/tutorials/css-scrollbars
+ */
+*::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: orange;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #6610f2;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
+
+
+
+
+
+
+#content {
+  display: grid;
+  grid-template-columns: 4vw 28vw 4vw 28vw 4vw 28vw 4vw;
+  grid-template-rows: 22vh 4vh 70vh 4vh;
+}
+
+.purple_title_text {
+  color: #6610f2;
+  font-size: 1.2em;
+}
+
+.reg_title_text {
+  font-size: 1.2em;
+}
+
+.badge_text {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: white;
+  background-color: #e83e8c;
+  padding: 0.35em 0.4em;
+  border-radius: 0.25rem;
+  display: inline-block;
+  transform: translateY(-80%);
+}
+
+.badge_text_greyed_out {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #e83e8c;
+  padding: 0.35em 0.4em;
+  border-radius: 0.25rem;
+  display: inline-block;
+  transform: translateY(-80%);
+}
+
+.menu_bar {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 0.5em;
+  backdrop-filter: blur(8px);
+}
+
+.black_background_content {
+  background-color: black;
+  background-clip: border-box;
+  border: 2px solid #6610f2;
+  border-radius: 0.75rem;
+  padding: 0.5em;
+}
+
+.purple_background_content {
+  background-color: #6610f2;
+  background-clip: border-box;
+  border-radius: 0.75rem;
+  padding: 0.5em;
+}
+
+#left_column {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  overflow: auto;
+}
+
+#middle_column {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 1;
+  overflow: auto;
+}
+
+#right_column {
+  grid-column: 6 / span 1;
+  grid-row: 3 / span 1;
+  overflow: auto;
+}
+
+.hero_image_banner {
+  grid-column: 1 / span 7;
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 40% 20% 40%;
+  background: url("/img/banner-2.jpg") center/cover;
+}
+
+a {
+  color: white;
+}
+
+
+input[type='submit'] {
+  font-size: 1.2em;
+  background-color: transparent;
+  border: 3px solid #e83e8c;
+  color: #e83e8c;
+  transform: translate3D(0, 0, 0);
+  transition: color 0.3s, background-color 0.3s, transform 0.15s;
+  cursor: pointer;
+}
+input[type='submit']:hover {
+  color: white;
+  font-size: 1.2em;
+  background-color: #e83e8c;
+  outline: none;
+}
+input[type='submit']:focus {
+  color: white;
+  font-size: 1.2em;
+  outline: none;
+}
+input[type='submit']:active {
+  color: white;
+  font-size: 1.2em;
+  background-color: #fd7e14;
+  transform: translate3D(0, 5px, 0);
+  outline: none;
+}
+
+
+
+.hero_image_banner #profile_name {
+  font-size: 0.8em;
+  text-shadow: 2 2 5px #6610f2;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  padding-left: 1.50em;
+}
+
+.hero_image_banner nav {
+  display: table;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  background-color: rgba(0,0,0,0.48);
+  box-shadow: 0 0 25px rgba(0,0,0,0.1), 0 5px 10px -3px rgba(0,0,0,0.13);
+  border-radius: 1em;
+  backdrop-filter: blur(6px);
+  padding: 1.2em;
+}
+
+.hero_image_banner ul {
+  display: table-row;
+}
+
+.hero_image_banner li {
+  display: table-cell;
+  text-align: center;
+}
+
+.hero_image_banner a {
+  text-decoration: none;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Universal Selector</title>
+    <meta charset="utf-8"/>
+    <style>
+      /* * {
+        font-size: larger;
+      } */
+      *.highlight{
+        background: #ffff00;
+      }
+      * {
+        font-size: 14pt;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tbody><tr><td>File Listing</td></tr>
+        </tbody>
+    </table>
+    <table class="highlight">
+      <tbody><tr><td>File
+        Listing</td></tr></tbody>
+    </table>
+    <p>Plain paragraph with a
+      <span class="highlight">highlighted areas of text</span> in
+      it.</p>
+    <p class="highlight">highlighted areas of text</p>
+
+
+  </body>
+</html>

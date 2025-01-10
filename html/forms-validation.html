@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Validation</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <form action="http://localhost:8000" method="post">
+        <fieldset>
+            <legend>Booking Details</legend>
+            <input type="text" id="name" name="name" value="" required="required"
+              placeholder="Enter name" pattern="[A-Za-z]{2,20}"/>
+            <input type="email" id="email" name="email"
+              placeholder="Enter email" required="required"/>
+            <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,20}"
+              placeholder="Enter password" required="required"/>
+            <input min="18" max="99" type="number" id="number" name="number" step="2" placeholder="Age"/>
+            <br/><br/>
+            <input id="submit" name="submit" value="Submit" type="submit"/>
+            <input id="reset" name="reset" value="Reset" type="reset"/>
+        </fieldset>
+    </form>
+  </body>
+</html>

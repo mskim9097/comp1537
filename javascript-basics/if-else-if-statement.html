@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>If-Else-If Statement</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <script>
+      /*<![CDATA[*/
+
+      // if statement on it's own
+      let x = 12;
+
+      if(x < 20) {
+          console.log("'x' is indeed less than 20");
+      }
+
+      var str1 = "hello";
+      var str2 = "hello";
+
+      console.log(str1 == str2);
+
+      var rate = 0.042;
+      var money = 20000;
+
+      if(rate < 0.4 && money <= 50000) {
+
+      }
+
+      // http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+      let state = Math.floor((Math.random() * 10) + 1);
+      console.log("Heads you win, tails you lose. " + state);
+      if(state < 5) {
+          console.log("Heads. You win!");
+      } else {
+          console.log("Tails. You lose!");
+      }
+
+      let mark = Math.floor((Math.random() * 10) + 1);
+      if(mark > 9) {
+          console.log("Perfect or close to perfect mark!");
+
+      } else if(mark > 7) {
+          console.log("Great mark.");
+
+      } else if(mark > 5) {
+          console.log("Decent mark.");
+
+      } else if(mark > 3) {
+          console.log("Not really, study dude.");
+      } else {
+          console.log("Study!!! :(");
+      }
+
+      let day = Math.floor((Math.random() * 7) + 1);
+      //console.log("Day", day);
+      let str = "";
+      switch(day) {
+          case 1:
+              str = "Monday";
+              break;
+          case 2:
+              str = "Tuesday";
+              break;
+          case 3:
+              str = "Wednesday";
+              break;
+          case 4:
+              str = "Thursday";
+              break;
+          case 5:
+              str = "Friday";
+              break;
+          case 6:
+              str = "Saturday";
+              break;
+          default:
+              str = "Sunday";
+              break;
+      }
+
+      console.log("The best day of the week is: " + str, new Date());
+
+      var isMember = Boolean(Math.floor(Math.random() * 2));
+      var msg = "The fee is " + (isMember ? "$2.00 because you are a member." : "$10.00 because you are not a member, sorry.");
+
+      console.log(msg);
+
+
+      /*]]>*/
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Local Storage - Objects</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+
+      body {
+        font-family: 'Hind', sans-serif;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        /*<![CDATA[*/
+        $(document).ready(function() {
+
+            // FOR GETTING/SETTING OBJECTS WITH HTML5 WEB STORAGE
+            // http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
+            Storage.prototype.setObject = function(key, value) {
+                this.setItem(key, JSON.stringify(value));
+            }
+
+            Storage.prototype.getObject = function(key) {
+                var value = this.getItem(key);
+                return value && JSON.parse(value);
+            }
+
+            var things = {dateCreated: new Date().valueOf(), items: ['apple', 'banana', 'kiwi']};
+
+            console.log(things);
+            localStorage.setObject('things', things);
+            var things2 = localStorage.getObject('things');
+            console.log(things2);
+
+        });
+        /*]]>*/
+    </script>
+
+  </body>
+</html>

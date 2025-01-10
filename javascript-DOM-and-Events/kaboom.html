@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kaboom</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 18pt;
+      }
+
+      #game {
+        display: block;
+        margin: 0px auto;
+      }
+
+      #main {
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="main">
+      <h2>Kaboom - Atari 2600</h2>
+      <canvas id="game" width="600" height="400" style="border:1px solid #d3d3d3;"></canvas>
+    </section>
+
+
+    <script>
+        // For more information on Kaboom, the Atari 2600 game, see:
+        // https://en.wikipedia.org/wiki/Kaboom! (video_game)
+        // or perhaps talk to your parents :P
+
+
+        "use strict";
+        let canvas;
+        let ctx;
+        let middlePosX = 275;
+        let mouseX = middlePosX;
+        let width = 600;
+        let height = 400;
+        let switchDirection = 300;
+        let dropAnotherBomb = 100;
+        let kaboomDudeX = 285;
+        let xVelocity = 8;
+        let score = 0;
+        let bombs = [];
+        let bombVelocityY = 6;
+        window.onload = init;
+
+
+        function init(){
+            canvas = document.getElementById('game');
+            canvas.addEventListener("mousemove", setMousePosition, false);
+            ctx = canvas.getContext('2d');
+
+            // Start the first frame request
+            window.requestAnimationFrame(gameLoop);
+        }
+
+        function gameLoop(timeStamp){
+            draw();
+
+            // Keep requesting new frames
+            window.requestAnimationFrame(gameLoop);
+        }
+
+        function setMousePosition(e) {
+            //console.log(e);
+            let rect = canvas.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+        }
+
+        function draw(){
+            // clear the whole drawing area
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawBackground();
+
+            drawScore();
+
+            drawKaboomDude();
+
+            dropBombs();
+
+            drawPaddle();
+        }
+
+        function drawPaddle() {
+            // draw paddle
+            ctx.fillStyle = "#e8a515";
+            ctx.fillRect(mouseX, 360, 50, 10);
+            ctx.fill();
+        }
+
+        function dropBombs() {
+            //dropAnotherBomb
+            dropAnotherBomb++;
+            if (dropAnotherBomb % 20 === 0) {
+                // he drops another bomb
+                bombs.push({x: kaboomDudeX, y: 100, w: 30, h: 30});
+            }
+            for(let i = 0; i < bombs.length; i++) {
+                let b = bombs[i];
+                // check for a collision with the paddle
+                if(((b.x + b.w) > mouseX) && ((b.x) < (mouseX + 50))) {
+                    // within the x coordinates of the paddle, now check for the y
+                    if((b.y + b.h) > 360) {
+                        // add to score and remove bomb, they collided
+                        score += 1;
+                        bombs.splice(i, 1);
+                    }
+                } else if(b.y > height) {
+                    // check for off screen (i.e., past the height)
+                    score -= 1;
+                    bombs.splice(i, 1);
+                }
+
+                // now draw all active bombs
+                ctx.fillStyle = "#555555";
+                ctx.fillRect(b.x, b.y += bombVelocityY, b.w, b.h);
+                ctx.fill();
+
+
+            }
+            //console.log(bombs.length);
+        }
+
+        function drawScore() {
+            // 1980s arcade font from Google
+            ctx.font = "20px 'Press Start 2P'";
+            ctx.fillStyle = "#ebdb4b";
+            ctx.fillText(score, 10, 30);
+        }
+
+        function drawKaboomDude() {
+            kaboomDudeX += xVelocity;
+            // check if we need to switch
+            if (switchDirection % 22 === 0) {
+                // flip a coin
+                if (Math.random() >= 0.60) {
+                    xVelocity *= -1;
+                }
+            }
+            switchDirection++;
+
+            if(kaboomDudeX < 0 || kaboomDudeX > (width - 30)) {
+                //change his direction to opposite
+                xVelocity *= -1;
+            }
+
+            // draw kaboom guy
+            // head
+            ctx.fillStyle = "#eb9e75";
+            ctx.fillRect(kaboomDudeX, 20, 30, 30);
+            ctx.fill();
+            // body
+            ctx.fillStyle = "#888888";
+            ctx.fillRect(kaboomDudeX, 50, 30, 50);
+            ctx.fill();
+        }
+
+        function drawBackground() {
+            // draw top background
+            ctx.fillStyle = "#AAAAAA";
+            ctx.fillRect(0, 0, width, 100);
+            ctx.fill();
+
+            // draw bottom background
+            ctx.fillStyle = "#438c41";
+            ctx.fillRect(0, 100, width, 300);
+            ctx.fill();
+        }
+
+    </script>
+  </body>
+</html>
+

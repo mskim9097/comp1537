@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Video</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+
+      body {
+        font-family: 'Hind', sans-serif;
+      }
+
+      h1 { text-align: center; }
+
+      #content {
+        background-color: #abef2a;
+      }
+
+      #vid1 {
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        height: auto;
+        padding-bottom: 2em;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>A video</h1>
+    <div id="content">
+      <p>A paragraph</p>
+      <video id="vid1" controls="controls"
+        poster="http://dummyimage.com/600x330/ccbbff/000000">
+        <source src="mov_bbb.mp4" type="video/mp4">
+        <!--<source src="mov_bbb.ogg" type="video/ogg">-->
+        Your browser does not support HTML 5 video.
+      </video>
+
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions - Example 2</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+
+    </div>
+
+    <script>
+      /*<![CDATA[*/
+      var n1 = 0.49;
+      var n2 = 0.51;
+
+      var name = "I am global!";
+
+      passOrFail(n1);
+      passOrFail(n2);
+
+      var total = sum(3, 4);
+
+      console.log(total)
+
+      console.log(returnGlobalVar());
+
+      // hoisting for function declarations
+      function passOrFail(n) {
+          if(n >= .5) {
+
+              console.log("You pass! " + n);
+              return;
+
+          } else {
+
+              console.log("Sorry, you fail. " + n);
+              return;
+          }
+      }
+
+      function sum(a, b) {
+          return a + b;
+      }
+
+      function returnGlobalVar() {
+          return name;
+      }
+
+
+      // using function declaration
+      function add1(n1, n2) {
+          return n1 + n2;
+      }
+
+      // using function expression (unnamed)
+      var add2 = function(n1, n2) {
+          return n1 + n2;
+      }
+
+      // using function expression (named)
+      // named is good for stack tracing/debugging
+      var add3 = function adding(n1, n2) {
+          return n1 + n2;
+      }
+
+      // using function constructor
+      var add4 = new Function("n1", "n2", "return n1 + n2;");
+
+      console.log(add1(2, 3));
+      console.log(add2(1, 2));
+      console.log(add3(1, 1));
+      console.log(add4(2, 2));
+
+
+
+      /*]]>*/
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Columns</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+      @import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+      @font-face {
+          font-family: 'arron_scriptregular';
+          src: url('fonts/arron_script-webfont.eot');
+          src: url('fonts/arron_script-webfont.eot?#iefix') format('embedded-opentype'),
+               url('fonts/arron_script-webfont.woff2') format('woff2'),
+               url('fonts/arron_script-webfont.woff') format('woff'),
+               url('fonts/arron_script-webfont.ttf') format('truetype'),
+               url('fonts/arron_script-webfont.svg#arron_scriptregular') format('svg');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      html, body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      body {
+        font-family: "Hind";
+        font-size: 14pt;
+      }
+
+      .multicolumns {
+        text-align: justify;
+        column-count: 3;
+        column-gap: 2em;
+        column-rule: 4px outset #ff00ff;
+        padding: 1em;
+      }
+      .titletext {
+        text-align: center;
+        font-size: 68pt;
+        margin: 4pt;
+        column-span: all;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="content" class='multicolumns'>
+      <p class='titletext'>Some Title</p>
+      ECMAScript 2015 (6th Edition) is the current version of the ECMAScript Language Specification standard. Commonly referred to as "ES6", it defines the standard for the JavaScript implementation in SpiderMonkey, the engine used in Firefox and other Mozilla applications.<br/>
+      Code-named "ES.next" or "Harmony", the first working draft (based on ECMAScript 5.1) was published on July 12, 2011 as "ES.next". In August 2014, the ECMAScript 6 draft specification was feature frozen and went through a stabilization and bug fixing period. Finally, ECMA-262 Edition 6 got officially approved and published as a standard on June 17, 2015 by the ECMA General Assembly. It will also appear as the international industry standard ISO/IEC 16262:2016.<br/>
+      Code-named "ES.next" or "Harmony", the first working draft (based on ECMAScript 5.1) was published on July 12, 2011 as "ES.next". In August 2014, the ECMAScript 6 draft specification was feature frozen and went through a stabilization and bug fixing period. Finally, ECMA-262 Edition 6 got officially approved and published as a standard on June 17, 2015 by the ECMA General Assembly. It will also appear as the international industry standard ISO/IEC 16262:2016.<br/>
+      Code-named "ES.next" or "Harmony", the first working draft (based on ECMAScript 5.1) was published on July 12, 2011 as "ES.next". In August 2014, the ECMAScript 6 draft specification was feature frozen and went through a stabilization and bug fixing period. Finally, ECMA-262 Edition 6 got officially approved and published as a standard on June 17, 2015 by the ECMA General Assembly. It will also appear as the international industry standard ISO/IEC 16262:2016.<br/>
+
+    </div>
+
+  </body>
+</html>

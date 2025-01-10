@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation 4 - Change Position</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+      @keyframes moveAnim {
+        0%   { left:0px; top:0px; }
+        25%  { left:200px; top:0px; }
+        50%  { left:200px; top:200px; }
+        75%  { left:0px; top:200px; }
+        100% { left:0px; top:0px; }
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: moveAnim 5s infinite;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div style="background: blue;">Oh hai!</div>
+  </body>
+</html>

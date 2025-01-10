@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Shapes</title>
+    <meta charset="utf-8"/>
+    <style>
+      body { padding-left: 50px; }
+
+      #square { width: 32px; height: 32px; background: black; }
+      #circle { width: 32px; height: 32px; background: black; border-radius: 16px;}
+      #pill { width: 64px; height: 32px; background: black; border-radius: 16px;}
+      #oval { width: 64px; height: 32px; background: black; border-radius: 64px/32px;}
+
+      #up-triangle {
+         width: 0;
+         height: 0;
+         border-bottom: 120px solid blue;
+         border-left: 60px solid transparent;
+         border-right: 60px solid transparent;
+      }
+
+      #twelve-point-star {
+         height: 100px;
+         width: 100px;
+         background: blue;
+         position: absolute;
+      }
+      #twelve-point-star:before {
+         height: 100px;
+         width: 100px;
+         background: blue;
+         content:"";
+         position: absolute;
+         /* Rotate */
+         transform: rotate(30deg);
+      }
+      #twelve-point-star:after {
+         height: 100px;
+         width: 100px;
+         background: blue;
+         content:"";
+         position: absolute;
+         /* Rotate */
+         transform: rotate(-30deg);
+      }
+
+      #speech-bubble {
+         width: 120px;
+         height: 80px;
+         background: blue;
+         position: absolute;
+         border-radius: 10px;
+      }
+      #speech-bubble:before {
+         content:"";
+         position: absolute;
+         width: 0;
+         height: 0;
+         border-top: 13px solid transparent;
+         border-right: 26px solid blue;
+         border-bottom: 13px solid transparent;
+         margin: 13px 0 0 -25px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id='square'></div>
+    <br/><br/><br/>
+    <div id='circle'></div>
+    <br/><br/><br/>
+    <div id='pill'></div>
+    <br/><br/><br/>
+    <div id='oval'></div>
+    <br/><br/><br/>
+    <div id='up-triangle'></div>
+    <br/><br/><br/>
+    <div id='twelve-point-star'></div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div id='speech-bubble'></div>
+    <br/><br/><br/>
+
+
+
+  </body>
+</html>

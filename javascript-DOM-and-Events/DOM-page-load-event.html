@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The DOM - Document Loaded Event</title>
+    <meta charset="utf-8"/>
+    <style>
+      /* I got no style man! */
+    </style>
+  </head>
+  <body>
+
+    <div id="content">
+      Put your really cool web stuffs in here!
+    </div>
+
+    <script>
+
+        /*
+         * we are invoking the ready function and passing in a callback that will be
+         * called only when the page has been fully loaded. Your code for your entire
+         * web app should all go inside of here.
+         */
+        ready(function() {
+
+            // put your app code inside of here
+
+        });
+
+        /*
+         * Once again, this is a function declaration. The function is hoisted and
+         * can therefore be called even before it has been declared (notice above
+         * reference to it without error).
+         */
+        function ready(callback) {
+            /*
+             * We need to check document.readyState for the following scenario:
+             * - On the off chance, the document is already loaded
+             *   and we missed the event signialing that the document
+             *   is already loaded, otherwise we would wait forever.
+             */
+            if (document.readyState != "loading") {
+                callback();
+                console.log("ready state is 'complete'");
+            } else {
+                document.addEventListener("DOMContentLoaded", callback);
+                console.log("Listener was invoked");
+            }
+        }
+
+    </script>
+  </body>
+</html>
+

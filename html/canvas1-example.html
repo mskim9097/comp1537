@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Canvas</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <!-- here's a comment -->
+    <canvas id='canvas' width='600' height='400'>
+       Canvas not supported
+    </canvas>
+    <script>
+      var canvas=document.getElementById('canvas');
+      var ctx=canvas.getContext('2d');
+      ctx.fillStyle='#FF0000';
+      ctx.fillRect(0,0,80,100);
+    </script>
+  </body>
+</html>

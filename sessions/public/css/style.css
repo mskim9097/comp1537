@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'comfortaaregular';
+    src: url('/fonts/comfortaa-variablefont_wght-webfont.eot');
+    src: url('/fonts/comfortaa-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/comfortaa-variablefont_wght-webfont.woff2') format('woff2'),
+         url('/fonts/comfortaa-variablefont_wght-webfont.woff') format('woff'),
+         url('/fonts/comfortaa-variablefont_wght-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: "comfortaaregular";
+  font-size: 14pt;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(5, vw100);
+  grid-template-rows: repeat(5, vh100);
+  align-items: end;
+  background: url("/img/banner.jpg") center/cover fixed;
+}
+
+#errorMsg {
+  color: red;
+}
+
+#formPanel {
+  background-color: blue;
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: rgba(0,0,0,0.48);
+  box-shadow: 0 0 25px rgba(0,0,0,0.1), 0 5px 10px -3px rgba(0,0,0,0.13);
+  border-radius: 1em;
+  backdrop-filter: blur(6px);
+}
+
+
+footer {
+  background-color: green;
+  grid-row: 5 / 5;
+  grid-column: 1 / span 5;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1em;
+/*        filter: blur(0.6px);*/
+}
+
+footer #left {
+  float: left;
+
+}
+
+footer #right {
+  float: right;
+  text-align: right;
+  font-size: 0.75em;
+}
+
+#loginForm {
+  color: white;
+  text-align: center;
+}
+
+#loginForm a {
+  color: #fd7e14;
+}
+
+#loginForm > input {
+  font-size: 1.1em;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #212121;
+  padding: 0.4em;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 6px;
+}
+
+
+#loginForm > input[type="button"] {
+  background-color: transparent;
+  border: 3px solid #f2f2f8;
+  color: #f2f2f8;
+  transform: translate3D(0, 0, 0);
+  transition: color 0.3s, background-color 0.3s, transform 0.15s;
+  cursor: pointer;
+}
+#loginForm > input[type="button"]:hover {
+  color: #212121;
+  background-color: #f2f2f8;
+  outline: none;
+}
+#loginForm > input[type="button"]:focus {
+  outline: none;
+}
+#loginForm > input[type="button"]:active {
+  transform: translate3D(0, 5px, 0);
+  outline: none;
+}
+
+#loginForm > p {
+  margin: 1em;
+}
+
+#loginForm > p > span {
+  text-align: center;
+  font-size: 1.1em;
+  color: red;
+  display: none;
+}
+
+a {
+  color: #e83e8c;
+}

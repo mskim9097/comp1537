@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation 3 - Color Change Loop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+      @keyframes colorAnim {
+          0%   {background: red;}
+          15%  {background: yellow;}
+          71%  {background: blue;}
+          100% {background: red;}
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        color: green;
+        animation: colorAnim 5s infinite;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

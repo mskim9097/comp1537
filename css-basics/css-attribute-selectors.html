@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Attribute Selectors</title>
+    <meta charset="utf-8"/>
+    <style>
+
+      /* with existing attribute */
+      a[target] {
+        background-color: #cf18fd;
+      }
+
+      /* with attribute, with exact value */
+      p[id='firstP'] {
+        background-color: #abceef;
+      }
+
+      /* with attribute, contains in a space-separated list */
+      p[class~='classA'] {
+        background-color: pink;
+      }
+
+      /* with attribute, contains this string in the value */
+      a[href*='bcit'] {
+        border: 2px solid;
+        padding: 4px;
+      }
+
+      /* with attribute, starts with this string */
+      a[href^='#'] {
+        cursor: wait;
+      }
+
+      /* with attribute, ends with this string */
+      img[src$='.jpg'] {
+        border: 4px solid;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <p id="firstP">Here's a <a href="#bottom">link within the page</a>.</p>
+      <p class="classA classB classC">Here's a <a href="http://www.bcit.ca" target="_blank">link to BCIT</a>.</p>
+    </div>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div>
+      <p>Here's a <a id="bottom">link within the page</a>.</p>
+      <img src="http://www.bcit.ca/images/v4_entrybanners/bcit_home/home_mtrans_lrg_sd.jpg" alt="an image"/>
+    </div>
+
+  </body>
+</html>

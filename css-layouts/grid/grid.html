@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Grid Layouts</title>
+    <meta charset="utf-8"/>
+    <style>
+
+      html, body {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #container {
+        background-color: orange;
+        display: grid;
+/*        grid-gap: 1em;*/
+        height: 100vh;
+        grid-template-columns: 25vw 25vw 25vw 25vw;
+        grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+      }
+
+      #title {
+        background-color: aquamarine;
+        grid-column: 3 / span 2;
+        grid-row: 1 / span 3;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+      }
+      #t1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        background-color: salmon;
+      }
+
+      #t2 {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        background-color: rosybrown;
+      }
+
+      #footer {
+        background-color: bisque;
+        grid-column: 1 / span 4;
+        grid-row: 5 / span 1;
+      }
+
+      #aside {
+        background-color: darkorchid;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+      <div id="title">
+        <div id="t1">T1</div>
+        <div id="t2">T2</div>
+      </div>
+      <div id="footer">
+        Footer (should be on bottom)
+      </div>
+      <div id="aside">
+        Something on the side (left for now)
+      </div>
+    </div>
+
+  </body>
+</html>

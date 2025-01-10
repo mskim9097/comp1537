@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slide Show</title>
+    <meta charset="utf-8"/>
+    <style>
+
+      .fadein img {
+        position: absolute;
+      }
+      #f1 {
+        animation:fade 8s infinite;
+      }
+      #f2 {
+        animation:fade2 8s infinite;
+      }
+      #f3 {
+        animation:fade3 8s infinite;
+      }
+      @keyframes fade1
+      {
+        0%   {opacity:1}
+        33.333% { opacity: 0}
+        66.666% { opacity: 0}
+        100% { opacity: 1}
+      }
+      @keyframes fade2
+      {
+        0%   {opacity:0}
+        33.333% { opacity: 1}
+        66.666% { opacity: 0 }
+        100% { opacity: 0}
+      }
+      @keyframes fade3
+      {
+        0%   {opacity:0}
+        33.333% { opacity: 0}
+        66.666% { opacity: 1}
+        100% { opacity: 0}
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="fadein">
+      <img id="f3" src="http://i.imgur.com/R7A9JXc.png" alt="image 1">
+      <img id="f2" src="http://i.imgur.com/D5yaJeW.png" alt="image 2">
+      <img id="f1" src="http://i.imgur.com/EUqZ1Er.png" alt="image 3">
+    </div>
+
+
+  </body>
+</html>

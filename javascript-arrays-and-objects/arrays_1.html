@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arrays 1 - Initializing, Sorting</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <div>
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+    </div>
+
+    <script>
+      /*<![CDATA[*/
+      // look at the console for the logged comments
+
+      // could also use
+      // document.getElementById("p1").innerHTML =
+
+      // can create arrays in two different ways
+
+      // array initializer:
+      let ar1a = [];
+      // if not passing arguments, you can skip the parenthesis
+      let ar1b = new Array();
+      document.getElementById("p1").innerHTML = "array 1a size: " + ar1a.length
+          + ", array 1b size: " + ar1b.length;
+
+      // creating and populating arrays
+
+      // line 34 usually preferred - less typing but both are equivalent
+      let ar2a = ['Arron', 'Ferguson', 'arron_ferguson@bcit.ca'];
+      let ar2b = new Array('Arron', 'Ferguson', 'arron_ferguson@bcit.ca');
+      document.getElementById("p2").innerHTML = "array 2a size: " + ar2a.length
+          + ", array 2b size: " + ar2b.length;
+
+      console.log("ar2a index 2: " + ar2a[2]);
+      console.log("ar2a index 2: " + ar2a[3]); // oops! Index out of bounds!
+
+      let ar3a = [6044328461, 'Arron', null, true, ['Yes', 'No']];
+      console.log("ar3a: ", ar3a);
+
+      let ar4a = ['Bruce', 'Jim', 'Arron', 'Keith', 'Ramin'];
+      let ar4b = [8, 29, 620, 84];
+
+
+      // sorting and printing out the values of the array
+
+      var ar4aSorted = ar4a.sort();
+      console.log("ar4a sorted: ", ar4aSorted);
+
+      // huh? What's wrong?
+      var ar4bSorted = ar4b.sort();
+      console.log("ar4b sorted: ", ar4bSorted.valueOf());
+
+      // try again
+      var ar4bNumbersSorted = ar4b.sort(function(a, b) { return a - b;});
+      console.log("ar4b sorted for numbers: ", ar4bNumbersSorted.valueOf());
+
+      var ar4cNumbersSortedReverseOrder = ar4bNumbersSorted.reverse();
+      console.log("ar4b sorted for numbers reversed: ", ar4cNumbersSortedReverseOrder.valueOf());
+
+      // note: can also use toString()
+       console.log("ar4b sorted for numbers reversed (with toString()): ", ar4cNumbersSortedReverseOrder.toString());
+
+
+      /*]]>*/
+    </script>
+
+  </body>
+</html>

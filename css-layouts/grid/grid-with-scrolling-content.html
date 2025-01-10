@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Grid with Scrolling Content</title>
+    <meta charset="utf-8"/>
+    <style>
+      /* from:
+      https://kerry-convery.medium.com/using-css-grid-to-sandwich-scrollable-content-been-a-page-header-and-footer-5f9fee3670dd
+       */
+      * {
+        margin: 0;
+        font-size: 14pt;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+      }
+
+      .grid_layout {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100%;
+        row-gap: 2rem;
+      }
+
+      .page_title {
+        background-color: darkgrey;
+        grid-row: 1;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+
+      .page_content {
+        position: relative;
+        grid-row: 2;
+        overflow-y: auto;
+      }
+
+      .scrollable_content {
+        padding: 2em;
+        position: absolute;
+      }
+
+      .page_footer {
+        padding-bottom: 1em;
+        padding-top: 1em;
+        text-align: center;
+        grid-row: 3;
+        background-color: darkgrey;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="grid_layout">
+      <div class="page_title">
+        Page Title
+      </div>
+      <div class="page_content">
+        <div class="scrollable_content">
+          <p>Music therapy is used to treat stress and anxiety in patients for a broad range of reasons such as cancer treatment, substance abuse, addressing trauma, and just daily stress in life. However, access to treatment is limited by the need for trained music therapists and the difficulty of quantitatively measuring efficacy in treatment. We present a survey of digital music systems that utilize biosensing for the purpose of reducing stress and anxiety with therapeutic use of music. The survey analyzes biosensing instruments for brain activity, cardiovascular, electrodermal, and respiratory measurements for efficacy in reduction in stress and anxiety. The survey also emphasizes digital music systems where biosensing is utilized to adapt music playback to the subject, forming a biofeedback loop. We also discuss how these digital music systems can use biofeedback coupled with machine learning to provide improved efficacy. Lastly, we posit that such digital music systems can be realized using consumer-grade biosensing wearables coupled with smartphones. Such systems can provide benefit to music therapists as well as to anyone wanting to treat stress from daily living.</p>
+          <p>Music therapy is used to treat stress and anxiety in patients for a broad range of reasons such as cancer treatment, substance abuse, addressing trauma, and just daily stress in life. However, access to treatment is limited by the need for trained music therapists and the difficulty of quantitatively measuring efficacy in treatment. We present a survey of digital music systems that utilize biosensing for the purpose of reducing stress and anxiety with therapeutic use of music. The survey analyzes biosensing instruments for brain activity, cardiovascular, electrodermal, and respiratory measurements for efficacy in reduction in stress and anxiety. The survey also emphasizes digital music systems where biosensing is utilized to adapt music playback to the subject, forming a biofeedback loop. We also discuss how these digital music systems can use biofeedback coupled with machine learning to provide improved efficacy. Lastly, we posit that such digital music systems can be realized using consumer-grade biosensing wearables coupled with smartphones. Such systems can provide benefit to music therapists as well as to anyone wanting to treat stress from daily living.</p>
+          <p>Music therapy is used to treat stress and anxiety in patients for a broad range of reasons such as cancer treatment, substance abuse, addressing trauma, and just daily stress in life. However, access to treatment is limited by the need for trained music therapists and the difficulty of quantitatively measuring efficacy in treatment. We present a survey of digital music systems that utilize biosensing for the purpose of reducing stress and anxiety with therapeutic use of music. The survey analyzes biosensing instruments for brain activity, cardiovascular, electrodermal, and respiratory measurements for efficacy in reduction in stress and anxiety. The survey also emphasizes digital music systems where biosensing is utilized to adapt music playback to the subject, forming a biofeedback loop. We also discuss how these digital music systems can use biofeedback coupled with machine learning to provide improved efficacy. Lastly, we posit that such digital music systems can be realized using consumer-grade biosensing wearables coupled with smartphones. Such systems can provide benefit to music therapists as well as to anyone wanting to treat stress from daily living.</p>
+          <p>Music therapy is used to treat stress and anxiety in patients for a broad range of reasons such as cancer treatment, substance abuse, addressing trauma, and just daily stress in life. However, access to treatment is limited by the need for trained music therapists and the difficulty of quantitatively measuring efficacy in treatment. We present a survey of digital music systems that utilize biosensing for the purpose of reducing stress and anxiety with therapeutic use of music. The survey analyzes biosensing instruments for brain activity, cardiovascular, electrodermal, and respiratory measurements for efficacy in reduction in stress and anxiety. The survey also emphasizes digital music systems where biosensing is utilized to adapt music playback to the subject, forming a biofeedback loop. We also discuss how these digital music systems can use biofeedback coupled with machine learning to provide improved efficacy. Lastly, we posit that such digital music systems can be realized using consumer-grade biosensing wearables coupled with smartphones. Such systems can provide benefit to music therapists as well as to anyone wanting to treat stress from daily living.</p>
+        </div>
+      </div>
+      <div class="page_footer">
+        Page Footer
+      </div>
+    </div>
+
+  </body>
+</html>

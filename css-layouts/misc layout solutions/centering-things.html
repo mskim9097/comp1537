@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Centering Things</title>
+    <meta charset="utf-8"/>
+    <style>
+      body {
+        font-size: 12pt;
+      }
+      h1 {
+        text-align: center;
+        background: #ffeebb;
+      }
+
+      table {
+        border: 1px solid;
+        margin: 0 auto;
+
+      }
+      .textBlockCenter { margin: 0px auto; width: 20%; background: #aabbcc; }
+      .imageBlockCenter { margin-left: auto; margin-right: auto; display: block; background: #aabbcc; }
+      .verticalCenter { height: 10em; position: relative; background: #aaccbb;}
+      .verticalCenter p { margin: 0; position: absolute; top: 50%; transform: translate(0, -50%); }
+      .verticalAndHorizontalCenter { height: 10em; position: relative; background: #aadd88; }
+      .verticalAndHorizontalCenter p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        background: #ccaabb;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Using text-align: center;</h1>
+    <br/>
+    <p class="textBlockCenter">Using margin-left: auto; margin-right: auto; Also good for images too!</p>
+    <br/>
+    <img class="imageBlockCenter" src="./minion.jpg" alt="minion"/>
+
+    <div class="verticalCenter">
+      <p>Centering stuff vertically.</p>
+    </div>
+
+    <br/>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td>Stuff</td>
+            <td>More Stuff</td>
+            <td>Raster API</td>
+            <td>Zipped</td>
+          </tr>
+          <tr>
+            <td>Stuff</td>
+            <td>More Stuff</td>
+            <td>Raster API</td>
+            <td>Zipped</td>
+          </tr>
+          <tr>
+            <td>Stuff</td>
+            <td>More Stuff</td>
+            <td>Raster API</td>
+            <td>Zipped</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br/>
+
+    <div class="verticalAndHorizontalCenter">
+      <p>Centering stuff vertically and horizontally.</p>
+    </div>
+
+  </body>
+</html>

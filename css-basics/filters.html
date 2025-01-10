@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Filter Effects</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+      body {
+        font-family: 'Hind', sans-serif;
+        font-size: 14pt;
+        margin: 0px;
+        padding: 0px;
+        background-color: #BB9D76;
+      }
+      img {
+        box-shadow: 7px 7px 10px -2px rgba(0,0,0,0.47);
+        border: 1px solid #000000;
+        margin: 0px auto;
+        display: block;
+      }
+      .figuretext {
+        font-size: 0.8em;
+        text-align: center;
+        font-style: italic;
+      }
+
+      #img2 { filter: blur(2px); }
+      #img3 { filter: brightness(1.4); }
+      #img4 { filter: contrast(300%); }
+      /* Uses the alpha mask for drop shadow */
+      #img5 { filter: drop-shadow(16px 16px 20px #aa00cc); }
+      #img6 { filter: grayscale(90%); }
+      /* 360 */
+      #img7 { filter: hue-rotate(90deg); }
+      #img8 { filter: invert(65%); }
+      #img9 { filter: opacity(25%); }
+      #img10 { filter: saturate(200%); }
+      #img11 { filter: sepia(100%); }
+      #img12 { filter: blur(3px) brightness(1.8) grayscale(100%); }
+
+      .classBlurryText {
+        filter: blur(2px);
+      }
+
+    </style>
+  </head>
+  <body>
+      <br/>
+      <img id="img1"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">No Filter</p>
+      <img id="img2"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Blur</p>
+      <img id="img3"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Brightness</p>
+      <img id="img4"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Contrast</p>
+      <img id="img5"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Drop Shadow</p>
+      <img id="img6"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Grayscale</p>
+      <img id="img7"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Hue Rotate</p>
+      <img id="img8"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Invert</p>
+      <img id="img9"  src="./img/mdm.jpg" alt="image"/><p class="figuretext">Opacity</p>
+      <img id="img10" src="./img/mdm.jpg" alt="image"/><p class="figuretext">Saturation</p>
+      <img id="img11" src="./img/mdm.jpg" alt="image"/><p class="figuretext">Sepia</p>
+      <img id="img12" src="./img/mdm.jpg" alt="image"/><p class="figuretext">Multiple</p>
+
+      <p class='classBlurryText'>Some text that is blurry.</p>
+
+  </body>
+</html>

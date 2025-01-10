@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation 7 - Rotate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+      @keyframes rotateAnim {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #logo {
+        animation-name: rotateAnim;
+        animation-duration: 12s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./logo-V3.png" id="logo" alt="logo"/>
+    </div>
+  </body>
+</html>

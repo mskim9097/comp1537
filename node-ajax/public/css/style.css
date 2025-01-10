@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Hind);
+
+body {
+  font-family: "Hind";
+  font-size: 14pt;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ajax_content {
+  float: left;
+  width: 33.3%;
+  background-color: bisque;
+}

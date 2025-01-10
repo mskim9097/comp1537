@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arrays 2 - Pushing, Popping, Shifting, Unshifting, Editing, Deleting</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <div>
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+    </div>
+
+    <script>
+      /*<![CDATA[*/
+      // look at the console for the logged comments
+
+      // could also use
+      // document.getElementById("p1").innerHTML =
+
+      // pushing and poppping
+
+      var fruits = ["Apple", "Orange", "Banana"];
+      console.log("1 fruits: ", fruits);
+
+      // add to the end (i.e., push)
+      fruits.push("Cantelope");
+      console.log("2 fruits: ", fruits);
+
+      // add to the end (i.e., push)
+      fruits.push("Pear");
+      console.log("3 fruits: ", fruits.valueOf());
+
+      // remove from the end (i.e., pop)
+      fruits.pop();
+      console.log("4 fruits: ", fruits.valueOf());
+
+      // shifting (i.e., remove from the beginning)
+      fruits.shift();
+      console.log("5 fruits: ", fruits.valueOf());
+
+      // unshifting (i.e., add to the beginning)
+      fruits.unshift("Lemon");
+      console.log("6 fruits: ", fruits.valueOf());
+
+      // use index to update a value
+      fruits[1] = "Kiwi";
+      // what will this do?
+      fruits[20] = "Jack";
+      console.log("fruits (WHAT HAPPENS?): ", fruits.valueOf());
+
+      // delete an element - leaving the position in the array 'undefined'
+      delete fruits[2];
+      console.log("fruits: ", fruits.valueOf());
+      console.log("fruits[2]: ", fruits[2]);
+
+
+      /*]]>*/
+    </script>
+
+  </body>
+</html>

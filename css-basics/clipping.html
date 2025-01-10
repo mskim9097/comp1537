@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Clipping</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+      body {
+        font-family: 'Hind', sans-serif;
+        font-size: 14pt;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #img2 {
+        display: block;
+        width: 40%;
+        height: auto;
+        clip-path: circle(30% at 50% 50%);
+      }
+
+      #img3 {
+        clip-path: ellipse(15% 40% at 50% 50%);
+      }
+
+      #img4 {
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <img id='img2' src='./img/walterwhite.jpg' alt="walter white"/>
+    <p>Notice how far down the text is.</p>
+
+    <img id='img3' src='./img/walterwhite.jpg' alt="walter white"/>
+    <p>Notice how far down the text is.</p>
+
+    <img id='img4' src='./img/walterwhite.jpg' alt="walter white"/>
+    <p>Notice how far down the text is.</p>
+
+    <svg height="0" width="0">
+      <defs>
+        <clipPath id="svgPath1">
+          <circle stroke="#000000" stroke-miterlimit="10" cx="290" cy="160" r="130" />
+        </clipPath>
+      </defs>
+    </svg>
+
+  </body>
+</html>

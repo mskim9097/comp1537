@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Strings</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+
+    </div>
+
+    <script>
+        /*<![CDATA[*/
+
+        // string functions
+        // http://www.w3schools.com/jsref/jsref_obj_string.asp
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+        let s1 = "Hello world";
+        let s2 = new String("Hello World");
+        console.log(s1, s2);
+
+        console.log(s1.charAt(0));
+        console.log("s1", s1);
+        console.log(s1.charCodeAt(0));
+        console.log(s1.indexOf("lo"));
+        console.log(s1.lastIndexOf("l"));
+        console.log(s1.replace("world", "class"));
+        console.log(s1.search("ello"));
+        console.log(s1.substring(1,5));
+        console.log(s1.split(" "));
+        console.log(s1.endsWith("rld"));
+        console.log(s1.toLowerCase());
+        console.log(s1.toUpperCase());
+        console.log(s1.trim());
+        console.log(s1.length);
+
+        // replace with string only replaces first occurrence, replace with
+        // regular expression replaces all occurrences
+        s2 = 'pop';
+        console.log(s2.replace("p", "m"));
+        // format slash, phrase, slash, 'g' for global
+        console.log(s2.replace(/p/g, "m"));
+
+        console.log("2 + 3 = " + (2 + 3));
+
+
+        /*]]>*/
+    </script>
+
+  </body>
+</html>

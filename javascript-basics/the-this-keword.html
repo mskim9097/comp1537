@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meaning of 'this'</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <p id="p1">Hello World!</p>
+    <div>
+      <ul id="mylist">
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+    <script>
+
+        // the window itself and all of its methods/properties
+        // it will be the same if 'this' is used in a hoisted
+        // function that is not attached to anything
+        console.log("'this' as a global variable", this);
+
+        function Customer(firstName, lastName, email) {
+
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+
+            console.log(this);
+
+
+            this.toString = function() {
+                return this.firstName + " " + this.lastName + " " + " " + this.email;
+            }
+        }
+
+        let c1 = new Customer("Arron", "Ferguson", "arron_ferguson@bcit.ca");
+
+        $(document).ready(function() {
+            let count = 1;
+            $("#mylist li").each(function(index, elem) {
+                let text = $(elem).html();
+                console.log("'this' is each element in the 'each'", this);
+                $(elem).html(count++ + " " + text);
+            });
+
+            document.getElementById("p1").addEventListener(
+                "click",
+                function(evt) { console.log("'this' within the event", this); },
+                false);
+
+
+        });
+
+
+
+    </script>
+
+  </body>
+</html>

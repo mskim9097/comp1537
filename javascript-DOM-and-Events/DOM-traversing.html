@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The DOM - Traversing</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <section>
+      <h1>A heading</h1>
+
+      <div>
+        <p id="p1" class="main_para">a paragraph 1</p>
+        <p class="main_para">a paragraph 2</p>
+        <p class="main_para">a paragraph 3</p>
+        <p class="main_para">a paragraph 4</p>
+        <p id="p5" class="main_para">a paragraph 5</p>
+        <p class="main_para">a paragraph 6</p>
+        <p class="main_para">a paragraph 7</p>
+        <p class="main_para">a paragraph8</p>
+        <p class="main_para">a paragraph 9</p>
+        <p class="main_para">a paragraph and a <a target="_blank" href="https://www.bcit.ca">link</a> - and 10.</p>
+      </div>
+    </section>
+    <section>
+      <h1>Second heading</h1>
+      <div id="d1">
+        Main content
+        <div id="d2">
+          <a href="#">Could be a menu</a>
+          <div id="d3">
+            Mostly layout stuff here
+            <div id="d4" class="form_container">
+              Something about forms
+              <!-- No actual form here ... but there could be! -->
+              <div id="d5">
+                <p>arron_ferguson@bcit.ca</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+
+      function basics() {
+          console.log("The document", document);
+          console.log("Document body", document.body);
+          console.log("Document head", document.head);
+          console.log("d5", document.getElementById("d5"));
+      }
+      basics();
+
+      function findAllParagraphs() {
+          console.log("finding all paragraphs");
+          let paragraphs = document.querySelectorAll("p");
+          console.log("paragraphs", paragraphs);
+          console.log();
+      }
+      findAllParagraphs();
+
+      function css3Selector() {
+          let sel1 = document.querySelector("section .form_container");
+          console.log("section .form_container", sel1)
+
+          let sel2 = document.querySelector("a[href*='bcit']");
+          console.log("a[href*='bcit']", sel2);
+      }
+      css3Selector();
+
+      /*
+          This looks like an odd thing to do since the querySelector method will
+          search based on any CSS selector that you give it. However, you may be
+          doing what's known as "screen scraping" where you are not really sure
+          what you are looking for but you need to go through a document (or a
+          subset of a document) for a particular string, for example.
+       */
+      function recursiveSearch(node) {
+          for(let i = 0; i < node.childNodes.length; i++) {
+              let n = node.childNodes[i];
+              if (n.nodeType === Node.TEXT_NODE) {
+                  // comment out the next line to see what happens
+                  let str = n.textContent.trim();
+                  if(str.length == 0) {
+                      console.log("empty string");
+                  } else {
+                      console.log("Node's text", n.textContent);
+                  }
+              } else {
+                  recursiveSearch(n);
+              }
+          }
+      }
+      recursiveSearch(document.body);
+
+      let divParagraphs = document.body.querySelector("div").childNodes;
+      for(let i = 0; i < divParagraphs.length; i++) {
+          // what are we getting here?
+          console.log("paragraph(?) " + (i + 1), divParagraphs.item(i));
+          // how to fix?
+      }
+
+      document.querySelectorAll("p").forEach(function(p) {
+          let r = Math.floor(Math.random() * 256);
+          let g = Math.floor(Math.random() * 256);
+          let b = Math.floor(Math.random() * 256);
+          p.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
+      });
+
+
+      let p5 = document.getElementById("p5");
+      console.log("next", p5.nextElementSibling);
+      console.log("previous", p5.previousElementSibling);
+      console.log("parent", p5.parentElement);
+
+    </script>
+  </body>
+</html>
+

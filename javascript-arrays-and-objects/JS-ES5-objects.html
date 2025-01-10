@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Objects</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <script>
+
+      // create number with a literal
+      let num1 = 42;
+
+      // create an object using Number function
+      let num2 = Number(42);
+
+      // create an object using the new operator - and treating the
+      // Number function as a constructor
+      let num3 = new Number(42);
+
+      console.log("num1", typeof num1);
+      console.log("num2", typeof num2);
+      console.log("num3", typeof num3);
+
+      var str1 = new String("hi");
+      var str2 = "hello";
+      console.log(str1);
+      console.log(str2);
+
+      let greet = function() { console.log("hello"); }
+      console.log(greet);
+
+      let obj = {}
+      console.log("obj", obj);
+
+
+      function Student(name, id) {
+          this.name = name;
+          this.id = id;
+      }
+
+      let s1 = new Student("Arron", "arron_ferguson@bcit.ca");
+      Student.prototype.age = 29;
+
+      console.log("s1 has age", s1.age);
+
+      let s2 = new Student("Jason", "jason_harrison@bcit.ca");
+      console.log("s2 has age", s2.age);
+
+      console.log(Student.prototype); // object
+      console.log(s1.prototype); // undefined
+      console.log(s1.__proto__); // object
+
+
+      console.log(typeof num2);
+      console.log(Number.parseFloat(num1));
+      // creating an object and adding some properties to it
+      // using dot (.) notation to add the properties to the object
+      var cust1 = new Object();
+      // JSON = JavaScript Object Notation
+      // JavaScript objects are associative arrays
+      // Associative arrays are collections of key/value pairs
+      let cust123 = {"firstName": "Arron", "lastName": "Ferguson"};
+      // declaring and assigning a value to the properties
+      cust1.firstName = "Arron";
+      cust1.lastName = "Ferguson";
+      cust1.email = "arron_ferguson@bcit.ca";
+
+      // what does it print?
+      console.log("cust1", cust1['firstName']);
+
+
+      // creating an object and adding some properties to it
+      // using JSON
+      var cust2 = { firstName: "Jim", lastName: "Parry", email: "jim_parry@bcit.ca", greeting: function(name) {console.log("hello " + name);} };
+      console.log("cust2", cust2);
+
+      // creating an object and adding some properties to it
+      // using array notation (associative array)
+      var cust3 = new Object();
+      cust3["firstName"] = "Bruce";
+      cust3["lastName"] = "Link";
+      cust3["email"] = "bruce_link@bcit.ca";
+      console.log("cust3", cust3);
+
+
+      for(var property in cust3) {
+          var value = cust3[property];
+          console.log("cust3", property, value);
+      }
+
+      cust1.email = "[not listed]";
+      console.log(cust1);
+
+      console.log("cust1 instanceof Object: " + (cust1 instanceof Object));
+      console.log(typeof cust1 == "object");
+
+      // create our own type called Customer
+      function Customer(firstName, lastName, email) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.email = email;
+          this.toString = function() {
+              return this.firstName + " " + this.lastName + " " + " " + this.email;
+          }
+      }
+
+      //let f1 = new Function(x, y, z, "return x + y;");
+      let myArray = [2, 3];
+      console.log("myArray", myArray);
+      // instantiate a copy of 'customer'
+      let cust4 = new Customer("Keith", "Tang", "keith_tang@bcit.ca");
+
+      console.log(cust4.toString());
+      console.log(cust4);
+      console.log("cust4 instanceof Customer: ", (cust4 instanceof Customer));
+      console.log("cust4 instanceof Object: ", (cust4 instanceof Object));
+
+      var simpleStr = "This is a simple string";
+      var myString  = new String();
+      var myDate    = new Date();
+
+
+      // no because it is a string literal
+      console.log("simpleStr is String? " + (simpleStr instanceof String));
+      console.log("simpleStr is Object? " + (simpleStr instanceof Object));
+      // yes, it was made using the String class
+      console.log("myString is String? " + (myString instanceof String));
+      console.log("myDate is Date? " + (myDate instanceof Date));
+
+      console.log(isString("hello"));
+
+      // check for both string literal and instance of String class
+      function isString(s) {
+          return typeof(s) === 'string' || s instanceof String;
+      }
+
+
+
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Scrolling Grid</title>
+    <meta charset="utf-8"/>
+    <style>
+      html, body {
+        margin: 0px;
+        padding 0px;
+      }
+
+      .content {
+        padding: 5px;
+        background-color: beige;
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .column {
+        min-height: 550px;
+/*
+        margin: 0 auto;
+        width: 90%;
+*/
+        background-color: beige;
+        text-align: center;
+       }
+
+      .title {
+        display: inline;
+        text-align: center;
+        width: 80%;
+        font-size: 175%;
+/*        padding: 5px;*/
+        border-bottom: 2px solid black;
+/*        min-height: 100px;*/
+        background-color: bisque;
+       }
+    </style>
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="column">
+        <h1 class="title">Column 1</h1>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+        <p>Some text</p>
+      </div>
+      <div class="column" style="background: red;">
+        <h1 class="title">Column 2</h1>
+      </div>
+      <div class="column" style="background: blue;">
+        <h1 class="title">Column 3</h1>
+      </div>
+    </div>
+
+  </body>
+</html>

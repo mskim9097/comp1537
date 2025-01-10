@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>AJAX Example</title>
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+
+    <div id="content">
+      <div class="ajax_content">
+        <p>Get Weekdays as HTML</p>
+        <input id="weekdaysHTML" type="button" value="Submit"/>
+        <input class="clear" type="button" value="Clear"/>
+        <div class="ajax-stuff" id="weekdays-html"></div>
+      </div>
+      <div class="ajax_content">
+        <p>Get Weekdays as JSON</p>
+        <input  id="weekdaysJSON" type="button" value="Submit"/>
+        <input class="clear" type="button" value="Clear"/>
+        <div class="ajax-stuff" id="weekdays-json"></div>
+      </div>
+      <div class="ajax_content">
+        <p>Get Google Map Marker data (JSON)</p>
+        <input  id="marker" type="button" value="Submit"/>
+        <input class="clear" type="button" value="Clear"/>
+        <div class="ajax-stuff" id="marker-data"></div>
+      </div>
+    </div>
+
+    <script src="/js/client.js"></script>
+  </body>
+</html>

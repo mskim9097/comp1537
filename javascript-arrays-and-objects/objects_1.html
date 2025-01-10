@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Objects 1</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <script>
+      //greet("Arron");
+
+      let student1 = {};
+      // 1) Objects are associative arrays
+      // dot notation
+      student1.firstName = "Arron";
+      student1.lastName = "Ferguson";
+      // array notation
+      student1["email"] = "arron_ferguson@bcit.ca"
+
+      //console.log(student1);
+      // JavaScript Object Notation (JSON)
+      let student2 = {firstName: "Jason", lastName: "Wilder", email: "jason_wilder@bcit.ca"}
+      //console.log(student2);
+
+      // 2) JavaScript objects have 3 notations (dot, array, and JSON)
+
+      // function declarations (like below) are hoisted
+      function greet(name) {
+        if(arguments.length == 0) {
+          return;
+        }
+        if(arguments.length == 1) {
+          console.log("Hello " + name + ", how are you?");
+        } else {
+          for(let i = 0; i < arguments.length; i++) {
+            console.log("Hello " + arguments[i] + ", how are you?");
+          }
+        }
+        //console.log(arguments);
+
+        //console.log("Hello " + name + ", how are you?");
+      }
+      // functions are objects
+      //greet("Dean");
+      greet("arron", "bruce", "jason", "donna");
+      // 3) first class citizen
+      console.log(greet);
+    </script>
+
+  </body>
+</html>

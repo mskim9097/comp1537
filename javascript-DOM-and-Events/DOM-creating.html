@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The DOM - Creating</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <div id="placeholder">
+      Some text in this element - it will be replaced!
+    </div>
+    <!--
+          Empty body ... for now. And no style either but we'll fix that as well!
+      -->
+
+    <script>
+
+        let div = document.createElement("div");
+        //console.log(div);
+        let p1 = document.createElement("p");
+        p1.setAttribute("id", "p1");
+
+        // we can put mixed content inside of any element, in this case, the paragraph
+        p1.innerHTML = "A <b class='bigger' style='font-size:22pt;'>New</b> bit oit content!";
+
+        let p2 = document.createElement("p");
+        p2.setAttribute("id", "p2");
+        p2.innerHTML = "Hello, I'm the second paragraph but I'll cut in line!";
+
+        // the order doesn't really matter, but you have to remember to attach
+        // the most upper parent to the document.body
+
+        document.body.replaceChild(div, document.getElementById("placeholder"));
+        div.appendChild(p1);
+        // insert p2 before p1
+        div.insertBefore(p2, p1);
+
+    </script>
+  </body>
+</html>
+

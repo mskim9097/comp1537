@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Left</title>
+    <meta charset="utf-8"/>
+    <style>
+
+      html, body {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #container {
+        background-color: orange;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 25vw 75vw;
+        grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+      }
+
+      #header {
+        background-color: aquamarine;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+      }
+
+      #nav {
+        background-color: beige;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 5;
+      }
+
+      #nav img {
+        vertical-align: middle;
+        padding: 1em;
+        padding-left: 4em;
+        width: 10%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+      <header id="header">
+        <p>HEADER</p>
+      </header>
+      <aside id="nav">
+        <div class="nav_item">
+          <img src="./river.png" alt="River">
+          <span style="">River 1</span>
+        </div>
+        <div class="nav_item">
+          <img src="./river.png" alt="River">
+          <span style="">River 2</span>
+        </div>
+                <div class="nav_item">
+          <img src="./river.png" alt="River">
+          <span style="">River 3</span>
+        </div>
+
+
+
+      </aside>
+    </div>
+
+  </body>
+</html>

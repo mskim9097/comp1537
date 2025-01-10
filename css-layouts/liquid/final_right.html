@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic Layout</title>
+    <meta charset="utf-8"/>
+    <style media="screen">
+        body
+        {
+            margin: 0;
+            padding: 0;
+            font-family: georgia, times, "times new roman", serif;
+            color: #000;
+            background-color: #ddd;
+        }
+
+        #container
+        {
+            margin: 1em 5%;
+            background-color: #FFFFFF;
+/*
+            background-image:  url('./images/background.jpg');
+            background-repeat: repeat-y;
+*/
+            border: 1px solid #333;
+            background-position: right;
+        }
+
+        #banner
+        {
+            background-color: #666;
+            border-bottom: 1px solid #333;
+        }
+
+        #banner h1
+        {
+            margin: 0;
+            padding: .5em;
+        }
+
+        #nav
+        {
+            float: right;
+            width: 160px;
+            margin-right: 10px;
+            padding-top: 1em;
+        }
+        #menu
+        {
+            background-color: #666;
+        }
+        #nav p { margin-top: 0; }
+
+        #content
+        {
+            padding-top: 1em;
+            margin: 0 200px 0 2em;
+        }
+
+        #content h2 { margin-top: 0; }
+
+        #footer
+        {
+            clear: both;
+            background-color: #666;
+            padding: 1em;
+            text-align: right;
+            border-top: 1px solid #333;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="banner">
+        <h1>Site name</h1>
+      </div>
+      <div id="menu">menu here</div>
+      <div id="nav">
+        <p>Some content in the nav bar (or this could be for blurbs</p>
+      </div>
+      <div id="content">
+        <h2>Page heading</h2>
+        <p>Some content in a paragraph. Some content in a paragraph.
+        Some content in a paragraph. Some content in a paragraph.</p>
+      </div>
+      <div id="footer">
+        Footer stuff here
+      </div>
+    </div>
+  </body>
+</html>

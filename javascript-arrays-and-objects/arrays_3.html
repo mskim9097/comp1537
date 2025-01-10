@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arrays 3 - Slicing, Joining, Splitting</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <div>
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+    </div>
+
+    <script>
+      /*<![CDATA[*/
+      // look at the console for the logged comments
+
+      // could also use
+      // document.getElementById("p1").innerHTML =
+
+
+      // concatenating arrays (i.e., adding arrays together)
+      var fruits = ["Apple", "Orange", "Banana"];
+      var vegetables = ["Potato", "Carrot", "Asparagus"];
+      var junkfood = ["Chocolate Bar", "Potato Chips", "Cheetos"];
+      console.log("fruits: ", fruits.valueOf());
+
+      var food = fruits.concat(vegetables, junkfood);
+      console.log("food: ", food.valueOf());
+
+
+      // slicing arrays (i.e., selecting items from existing, and making a new
+      // array) start required and inclusive, end optional and exclusive
+      var lunch = food.slice(5, 7);
+      console.log("lunch: ", lunch.valueOf());
+
+
+      // join ... similar to concat but instead of returning a new array, join
+      // returns a string
+      var str = fruits.join("-");
+      console.log(str);
+
+
+      // split ... kind of the reverse of join: takes a string and turns it into
+      // an array (from a string)
+      var food2 = str.split("-");
+      console.log("food2: ", food2.valueOf());
+      console.log("food2: ", food2); // can be lazy and exclude "valueOf()"
+
+      //  trimming an array
+      food2.length = 2;
+      console.log("food2: ", food2);
+      food2.length = 6;
+      console.log("food2: ", food2);
+      console.log("food2[4]: ", food2[4]);
+
+
+      // splice - can add or remove items at a given position
+      fruits = ["Apple", "Orange", "Banana", "Kiwi", "Grape", "Lemon"];
+      console.log("fruits before splice (remove): ", fruits);
+      // at index 3 (position 4) two items
+      fruits.splice(3, 2);
+      console.log("fruits after splice (remove): ", fruits);
+
+      // at index 1 (position 2) add three items
+      fruits.splice(1, 0, "Pear", "Mango", "Jack Fruit");
+      console.log("fruits after splice (add): ", fruits);
+
+      // check what type
+      console.log("fruits instance of array? ", (fruits instanceof Array));
+
+      /*]]>*/
+    </script>
+
+  </body>
+</html>

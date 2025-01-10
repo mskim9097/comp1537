@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pseudo Selectors</title>
+    <style>
+
+      a { background-color: #556677; }
+      a:link { color: #aabbcc; }
+      a:visited { color: #ccbbaa; }
+      a:hover { color: #ffffab; }
+      a:active { color: #abffff; }
+      *.specialParagraph:first-line { font-weight: bold; }
+      *.specialParagraph:first-letter { font-size: 200%; font-weight: bold; }
+
+      .schedule p:nth-of-type(2n+1)
+        { background-color: chartreuse }
+      .schedule p:nth-of-type(2n)
+        { background-color: burlywood; }
+
+      .schedule tr:nth-of-type(3n+1)
+        { background-color: chartreuse }
+      .schedule tr:nth-of-type(3n)
+        { background-color: burlywood; }
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <p>Check out the <a target="_blank" href="http://www.bcit.ca"> anchor element</a>.</p>
+
+    <p class="a b c specialParagraph d e">You cannot predict what typefaces the readers of your document will have. So when you specify font typefaces, it is a good idea to give a list of alternatives in order of preference.
+
+End the list with one of the built-in default typefaces: serif, sans-serif, cursive, fantasy or monospace.
+
+If the typeface does not support some features in the document, then the browser can substitute a different typeface. For example, the document might contain special characters that the typeface does not support. If the browser can find another typeface that has those characters, then it will use the other typeface.</p>
+
+    <div class="schedule">
+      <p>First paragraph (1)</p>
+      <p>Second paragraph(2)</p>
+      <p>Third paragraph (3)</p>
+      <p>Third paragraph (4)</p>
+    </div>
+
+    <table class="schedule">
+      <tr>
+        <th>something</th>
+        <th>something</th>
+      </tr>
+      <tr>
+        <td>some test</td>
+        <td>moret test</td>
+      </tr>
+      <tr>
+        <td>some test</td>
+        <td>moret test</td>
+      </tr>
+      <tr>
+        <td>some test</td>
+        <td>moret test</td>
+      </tr>
+      <tr>
+        <td>some test</td>
+        <td>moret test</td>
+      </tr>
+      <tr>
+        <td>some test</td>
+        <td>moret test</td>
+      </tr>
+
+    </table>
+
+  </body>
+</html>

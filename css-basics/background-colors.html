@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Background Colors &amp; Gradients</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+      body {
+        font-family: 'Hind', sans-serif;
+        font-size: 14pt;
+        margin: 20px;
+        background: rgb(22, 120, 190);
+      }
+
+      #p1 {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      #a1 {
+        background-color: #ccbbaa;
+        opacity: 0.5;
+      }
+
+      #grad1 {
+        background: linear-gradient(orange, purple);
+        height: 200px;
+      }
+
+      #grad2 {
+        background: linear-gradient(to bottom right, orange, purple);
+        height: 200px;
+      }
+
+      #grad3 {
+        background: linear-gradient(yellow 30px, orange, red, purple, blue);
+        height: 200px;
+      }
+
+      #grad4 {
+        background: linear-gradient(70deg, white, black);
+        height: 200px;
+      }
+
+      #grad5 {
+        background: repeating-linear-gradient(45deg, black 7%, white 10%);
+        height: 200px;
+        color: white;
+        font-weight: bold;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+
+      #grad6 {
+        background: repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255, 1) 25px, rgba(255,255,255, 1) 50px);
+        height: 200px;
+        color: white;
+        font-weight: bold;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+
+      #grad7 {
+        background: radial-gradient(orange, yellow, red);
+        height: 200px;
+      }
+
+      #grad8 {
+        background: radial-gradient(red 5%, green 15%, blue 60%);
+        height: 200px;
+      }
+
+      #grad9 {
+        background: radial-gradient(circle, red, yellow, green);;
+        height: 200px;
+      }
+
+      #grad10 {
+        background: radial-gradient(ellipse farthest-corner at 100px 47px , #FFFF80 20%, rgba(204, 153, 153, 0.4) 30%, #E6E6FF 60%);
+        height: 200px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="grad1">
+      <p id="p1">Filter effects originated as part of the <a id="a1" href="http://www.w3.org/Graphics/SVG/" target="_blank">Scalable Vector Graphics (SVG) specification</a>.</p>
+    </div>
+
+    <!-- Linear Gradients -->
+    <div id="grad2">Another gradient.</div>
+    <div id="grad3">Another gradient.</div>
+    <div id="grad4">Another gradient.</div>
+    <div id="grad5">Another gradient.</div>
+    <div id="grad6">Another gradient.</div>
+
+    <!-- Radial Gradients -->
+    <div id="grad7">Another gradient.</div>
+    <div id="grad8">Another gradient.</div>
+    <div id="grad9">Another gradient.</div>
+    <div id="grad10">Another gradient.</div>
+
+  </body>
+</html>

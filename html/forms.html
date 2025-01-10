@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <form action="/submit">
+      <fieldset>
+        <legend>User Login Info</legend>
+        <input type="text" id="name" name="name" placeholder="Name" autofocus="autofocus"
+          pattern="[A-Za-z]{2,20}" required="required"/>
+        <input type="email" id="email" name="email" placeholder="Email"/>
+        <input type="password" id="pwd" name="pwd" placeholder="Password"
+          pattern="[A-Z0-9a-z]{6,20}" required="required"/>
+        <input type="hidden" id="session" name="session" value=""/>
+      </fieldset>
+      <fieldset>
+        <legend>Profile Info</legend>
+        <label><input type="checkbox" id="happy" name="happy"/>Happy?</label><br/>
+        <label>Rate your interest in coffee.</label>
+        <input type="radio" id="c1" name="coffee" value="None"/>
+        <input type="radio" id="c2" name="coffee" value="Sort of"  checked="checked"/>
+        <input type="radio" id="c3" name="coffee" value="Really"/>
+        <input type="radio" id="c4" name="coffee" value="Addicted"/>
+      </fieldset>
+      <fieldset>
+        <legend>Preferences</legend>
+        <label>Browsers</label><input list="browsers">
+        <label>Favorite color: </label><input type="color" id="color" name="color" value="#ffff00"/>
+        <label>DOB: </label><input type="date" id="date" name="date"/>
+        <label>Favorite month: </label><input type="month" id="month" name="month"/>
+        <label>Age: </label><input min="18" step="2" max="99" type="number" id="number" name="number" value="19"/>
+        <select size="1" name="experience" id="experience">
+          <option value="newcomer" selected="selected">Newcomer</option>
+          <option value="semi-experienced">Semi-experienced</option>
+          <option value="advanced">Advanced</option>
+        </select>
+        <select size="3" multiple="multiple" name="technologies" id="technologies">
+          <option value="CSS">CSS</option>
+          <option value="C#">C#</option>
+          <option value="HTML">HTML</option>
+          <option value="Java" selected="selected">Java</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="PHP">PHP</option>
+          <option value="XML">XML</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Review</legend>
+        <label for="uploadComment">Upload Comment File:</label>
+        <input type="file" name="uploadComment" id="uploadComment" multiple="multiple"/>
+      </fieldset>
+      <fieldset>
+        <legend>Submission</legend>
+        <input type="submit" id="submit" name="submit" value="Submit"/>
+        <input type="image" src="./images/folder-icon.jpg" id="imageSubmit" name="imageSubmit" alt="folder"/>
+        <input type="reset" id="reset" name="reset" value="Reset"/>
+        <input type="button" id="calctotal" name="calctotal" value="Calculate Total"/>
+      </fieldset>
+    </form>
+
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+  </body>
+</html>

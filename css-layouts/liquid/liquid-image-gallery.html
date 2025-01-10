@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Liquid Image Gallery</title>
+    <!--
+      http://designshack.net/articles/css/how-to-build-a-responsive-thumbnail-gallery/
+      -->
+    <style>
+
+      .container {
+        width: 90%;
+        margin: 30px auto;
+        overflow: hidden;
+        background: #ffee99;
+      }
+
+      .galleryItem {
+        background: #4488ee;
+        text-align: center;
+        float: left;
+        /* NOTE: TAKE THE WIDTH PROPERTY OUT TO SEE WHAT HAPPENS */
+        width: 16%;
+        border: 1px solid;
+        /* top right bottom left */
+        margin:  1% 1% 2% 2%;
+      }
+
+      .galleryItem h3 {
+        text-transform: uppercase;
+      }
+
+      .galleryItem h3 p {
+        padding-left: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 5px;
+      }
+
+
+      .galleryItem img {
+        max-width: 100%;
+        display: block;
+        padding: 1em 0em 0em 0em;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin: 0 auto; */
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+      <div class="galleryItem">
+        <a href="#"><img src="./minion-small.jpg" alt=""></a>
+        <h3>Profile</h3>
+        <p>Minion #43: Dave</p>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

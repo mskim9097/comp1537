@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive Grid</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-size: 12pt;
+        background-color: #dddddd;
+      }
+
+      #content {
+
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 10vw 80vw 10vw;
+        grid-template-rows: 25vh 10vh 40vh 25vh;
+        background-color: white;
+        width: 100%;
+      }
+
+      #header {
+        background-color: beige;
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 1;
+      }
+
+      #nav {
+        background-color: cadetblue;
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 1;
+      }
+
+      #left {
+        background-color: darkgoldenrod;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+      }
+
+      #right {
+        background-color: crimson;
+        grid-column: 3 / span 1;
+        grid-row: 3 / span 1;
+      }
+
+      #middle {
+        background-color: blueviolet;
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+      }
+
+      #footer {
+        background-color: chocolate;
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 1;
+      }
+
+      @media only screen and (max-width : 800px) and (min-width : 600px) {
+
+        #content {
+          font-size: 2em;
+          grid-template-columns: 10vw 40vw 40vw 10vw;
+          grid-template-rows: 25vh 10vh 40vh 25vh;
+        }
+
+        #header {
+          grid-column: 1 / span 2;
+          grid-row: 1 / span 1;
+        }
+
+        #nav {
+          grid-column: 3 / span 2;
+          grid-row: 1 / span 1;
+        }
+
+        #left {
+          grid-column: 4 / span 1;
+          grid-row: 2 / span 2;
+          font-size: 8pt;
+          line-height: 9pt;
+        }
+
+        #middle {
+          grid-column: 1 / span 2;
+          grid-row: 2 / span 2;
+        }
+
+        #right {
+          grid-column: 3 / span 1;
+          grid-row: 2 / span 2;
+        }
+
+        #footer {
+          background-color: chocolate;
+          grid-column: 1 / span 4;
+          grid-row: 4 / span 1;
+        }
+
+
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="content">
+
+      <div id="header">This is the header</div>
+      <div id="nav">nav bar</div>
+      <div id="left">left</div>
+      <div id="middle">middle</div>
+      <div id="right">right</div>
+      <div id="footer">footer</div>
+
+    </div>
+
+
+  </body>
+</html>

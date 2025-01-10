@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Local Storage - Values</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+
+      body {
+        font-family: 'Hind', sans-serif;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <script>
+
+          var site = 'www.mysite.com';
+          var lastAccessed = new Date().valueOf();
+
+          console.log('site', site, 'last accessed', lastAccessed);
+
+//          localStorage.setItem('site', site);
+//          localStorage.setItem('last accessed', lastAccessed);
+
+          var site2 = localStorage.getItem('site');
+          var lastAccessed2 = localStorage.getItem('last accessed');
+          lastAccessed2 = parseInt(lastAccessed2);
+
+          console.log('site 2', site2, 'last accessed 2', lastAccessed2);
+
+    </script>
+
+  </body>
+</html>

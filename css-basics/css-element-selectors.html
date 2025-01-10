@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Element Selectors</title>
+    <meta charset="utf-8"/>
+    <style>
+      body {
+        font-family: gill, helvetica, sans-serif;
+        font-size: 12pt;
+        text-indent: 1em;
+        line-height: 1.75em;
+        background-color: rgb(80, 120, 255);
+      }
+      span {
+        margin: 5px;
+        border-style:solid;
+        border-width:5px;
+        background: #ab392b;
+        padding: 10px;
+        color: yellow;
+      }
+
+      p { font-size: 16pt; }
+
+      table { background-color: purple; color: white; }
+
+      h1, h2, h3, h4, h5, h6, div, em, abbr {
+        background-color: black;
+        color: white;
+        line-height: 28pt;
+      }
+      div {
+        background-color: red;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>A heading</h1>
+    <div style="background-color: beige;">I'm a div and I should be RED!!!</div>
+    <p>Some text in a paragraph, <span style="font-weight: bold;">some text in a span</span>
+    and <i>some text in an italic element</i>.</p>
+
+    <table>
+      <caption>File Listing</caption>
+      <thead>
+        <tr>
+          <td></td>
+          <td>File</td>
+          <td>Topic</td>
+          <td>Format</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">File<br/>Listing</td>
+          <td><a href="./downloads/1.zip">Java-intro-to-2D.zip</a></td>
+          <td>2D Raster API</td>
+          <td>Zipped Lecture Slides</td>
+        </tr>
+        <tr>
+          <td><a href="./downloads/2.zip">DOMDemo.zip</a></td>
+          <td>DOM Demo App</td>
+          <td>Zipped Java Source</td>
+        </tr>
+        <tr>
+          <td><a href="./downloads/3.jar">jcalendar.jar</a></td>
+          <td>Java Calendar App</td>
+          <td>Self-executing JAR</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>File <span>hello.txt</span></td>
+          <td>Topic</td>
+          <td>Format</td>
+        </tr>
+        <tr>
+          <td colspan="4">File Listing</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

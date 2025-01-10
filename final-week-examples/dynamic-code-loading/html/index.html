@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dynamic JavaScript</title>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Hind);
+
+      body {
+        font-family: 'Hind', sans-serif;
+      }
+    </style>
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+  </head>
+  <body>
+
+    <div id="content1">
+      <a href="" id="loadScript">Load a script dynamically</a>
+      <br/>
+      <a href="" id="runDynamicScript">Now Run It!</a>
+    </div>
+    <br/><br/><br/>
+    <div id="content2">
+      <a href="" id="loadClass">Load a class dynamically</a>
+      <br/>
+      <a href="" id="instantiateClass">Now instantiate It!</a>
+    </div>
+
+    <script type="module" src="/dynamically-loaded-class"></script>
+    <script>
+
+
+        function getScript(url, callback) {
+            const script = document.createElement('script');
+            script.src = url;
+            script.onload = callback;
+
+            document.body.appendChild(script);
+        }
+
+        var something = null;
+
+        document.getElementById("loadScript").addEventListener("click", function(e) {
+            e.preventDefault();
+            getScript('/dynamically-loaded-script', function() {
+                console.log("Script loaded.");
+                something = greeting;
+            });
+        });
+
+
+        document.getElementById("runDynamicScript").addEventListener("click", function(e) {
+            e.preventDefault();
+            something();
+
+        });
+
+
+        document.getElementById("loadClass").addEventListener("click", function(e) {
+            e.preventDefault();
+            getScript('/dynamically-loaded-class', function() {
+                console.log("Class loaded.");
+                //customerClass = Customer;
+            });
+        });
+
+        document.getElementById("instantiateClass").addEventListener("click", function(e) {
+            e.preventDefault();
+            let c1 = new Customer("Arron", 123);
+            console.log("New object created from the customer class", c1);
+        });
+
+    </script>
+
+  </body>
+</html>

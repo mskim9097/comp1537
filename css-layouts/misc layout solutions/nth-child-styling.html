@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using CSS nth-child()</title>
+    <meta charset="utf-8"/>
+    <style>
+      html, body { margin: 0px; padding: 0px; width: 100%; }
+      table {
+        background-color: antiquewhite;
+        width: 20%;
+        border: 1px black solid;
+        text-align: center;
+        margin: 0 auto;
+      }
+      #content {
+        background-color: beige;
+      }
+      /* just the third one */
+      .justOne tr:nth-child(5) {
+        background-color: cornflowerblue;
+        color: white;
+      }
+      /* five and on */
+      .fiveAndOn tr:nth-child(n+8) {
+        font-weight: 800;
+      }
+
+      /* three and before */
+      .threeAndBefore tr:nth-child(-n+3) {
+        font-size: 18pt;
+      }
+
+      /* every fourth row */
+      .threeAndBefore tr:nth-child(4n+1) {
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>for more, go to: <a href="https://css-tricks.com/useful-nth-child-recipies/" target="_blank">CSS-Tricks</a></p>
+    <div id="content">
+
+      <table class="fiveAndOn justOne threeAndBefore">
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+        <tr><td>stuff</td><td>more stuff</td></tr>
+      </table>
+
+    </div>
+
+  </body>
+</html>

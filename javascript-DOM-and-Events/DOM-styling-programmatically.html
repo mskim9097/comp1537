@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The DOM - Styling</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    <div>
+      <p id="p1"><b class='bigger' style='font-size:22pt;'>New</b> content!</p>
+      <p id="p2">Hello there!</p>
+    </div>
+
+    <script>
+
+        // let's put a stylesheet in the document (i.e., style element)
+        let style1 = document.createElement('style');
+        // don't forget to append it to the head
+        document.head.appendChild(style1);
+        // get it's 'sheet'
+        let styleSheet = style1.sheet;
+
+        // define some CSS rules
+        styleSheet.insertRule("@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');", 0);
+
+        // notice the quote? It's called a backtick, acute, left quote, back quote, or open quote
+        // using the backtick in JS is known as a template literal or template string
+        // we'll explore template literals next course but for now the multi-line strings is
+        // quite useful
+        styleSheet.insertRule(`      body {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 24pt;
+      }`, 1);
+
+        // as you can see, you can pretty much put anything you want inside of your style element
+        styleSheet.insertRule("#p1 b { color: red; }", 2);
+
+
+        // but what about linking to an existing CSS document?
+        let link  = document.createElement('link');
+        link.id = "firstLink";
+        link.rel = "stylesheet";
+        // don't need this line anymore but leave it in to see
+//        link.type = "text/css";
+        link.href = "./style.css";
+        link.media = "all";
+        document.head.appendChild(link);
+
+        /* you can also add style with the style property but this is not preferred
+           instead use a style sheet that's either in the style element (okay) or
+           even better is to use a link element and reference an external style sheet
+        */
+        let p2 = document.getElementById("p2");
+        p2.style.backgroundColor = "#cfaaef";
+        document.body.style.margin = "0px";
+        document.body.style.padding = "0px";
+
+
+    </script>
+  </body>
+</html>
+
