@@ -11,13 +11,13 @@
 <body>
     <main>
         <section>
-            <header>
-                <h1 id="top">MINSU KIM</h1>
+            <header id="top">
+                <h1>MINSU KIM</h1>
             </header>
         </section>
-        
-        
+                
         <section class="info">
+            <h4>Contact information</h4>
             <span>
                 <i>
                     <small>
@@ -40,69 +40,66 @@
                 <li><a href="#">FAQ</a></li>
             </ul>
         </nav>
-        <section class="content">
+
+        <section class="summary">
+            <h3>Summary</h3>            
+            <dl>                    
+                <dt>OBJECTIVE</dt>
+                <dd>
+                    <p>
+                        I am passionate about software development.
+                        I am seeking an internship at Company to apply and further develop my skills in this field.<br>
+                        I am excited about the opportunity to work in Company's dynamic and collaborative environment where I can contribute and grow.
+                    </p>
+                </dd>                                    
+                <dt>EDUCATION</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <abbr title="VCC ACRD Page Link">
+                                <a href="https://www.vcc.ca/international/programs/program-areas/transportation-trades/automotive-repair-and-refinishing/" target="_blank">
+                                    <img src="https://dummyimage.com/1*1/8DC63F/ffffff.jpg&text=VCC" alt="VCC logo">
+                                </a>
+                            </abbr>                
+                            Automotive Collision and Refinishing Diploma Program<br> 
+                            Vancouver Community College (Sep 2018 - Apr 2020)
+                        </li>
+                        <li>
+                            <abbr title="KH Academy Page Link">
+                                <a href="https://lms.khsmartcampus.com/main/index.jsp" target="_blank">
+                                    <img src="https://dummyimage.com/1*1/0055A4/ffffff.jpg&text=KH" alt="KH logo"> 
+                                </a>
+                            </abbr>
+                            Java & Web Development bootcamp<br>
+                            KH Information Educational Institute in South Korea (Dec 2022 - Jul 2023)
+                        </li>
+                        <li>
+                            <abbr title="BCIT CST Page Link">
+                                <a href="https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/" target="_blank">
+                                    <img src="https://dummyimage.com/1*1/0055A4/ffffff.jpg&text=BCIT" alt="BCIT logo">
+                                </a>
+                            </abbr>
+                            Computer System Technology Diploma Program<br> 
+                            British Columbia Institute of Technology (Jan 2025 ~ ongoing)</li>
+                    </ul>
+                </dd>
+                <dt>SKILLS and ABILITIES</dt>
+                <dd>
+                    <ol>
+                        <li>Java, Spring framework, JDBC, Oracle</li>
+                        <li>Html, CSS, JavaScript</li>
+                        <li>Hard working and confident</li>
+                        <li>Adapts easily to new environments</li>
+                        <li>Quick learner</li>
+                        <li>Delicate and High concentration</li>
+                        <li>Good teamwork</li>
+                    </ol>
+                </dd>
+            </dl>
+                        
             <section>
-                <dl>
-                    <article>
-                        <dt><h4>OBJECTIVE</h4></dt>
-                        <dd>
-                            <p>
-                                I am passionate about software development.
-                                I am seeking an internship at Company to apply and further develop my skills in this field.
-                                I am excited about the opportunity to work in Company's dynamic and collaborative environment where I can contribute and grow.
-                            </p>
-                        </dd>
-                    </article>
-                    
-                    <dt><h4>EDUCATION</h4></dt>
-                    <dd>
-                        <ul>
-                            <li>
-                                <abbr title="VCC ACRD Page Link">
-                                    <a href="https://www.vcc.ca/international/programs/program-areas/transportation-trades/automotive-repair-and-refinishing/" target="_blank">
-                                        <img src="https://dummyimage.com/1*1/8DC63F/ffffff.jpg&text=VCC">
-                                    </a>
-                                </abbr>                
-                                Automotive Collision and Refinishing Diploma Program<br> 
-                                Vancouver Community College (Sep 2018 - Apr 2020)
-                            </li>
-                            <li>
-                                <abbr title="KH Academy Page Link">
-                                    <a href="https://lms.khsmartcampus.com/main/index.jsp" target="_blank">
-                                        <img src="https://dummyimage.com/1*1/0055A4/ffffff.jpg&text=KH"> 
-                                    </a>
-                                </abbr>
-                                Java & Web Development bootcamp<br>
-                                KH Information Educational Institute in South Korea (Dec 2022 - Jul 2023)
-                            </li>
-                            <li>
-                                <abbr title="BCIT CST Page Link">
-                                    <a href="https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/" target="_blank">
-                                        <img src="https://dummyimage.com/1*1/0055A4/ffffff.jpg&text=BCIT">
-                                    </a>
-                                </abbr>
-                                Computer System Technology Diploma Program<br> 
-                                British Columbia Institute of Technology (Jan 2025 ~ ongoing)</li>
-                        </ul>
-                    </dd>
-                    <dt><h4>SKILLS and ABILITIES</h4></dt>
-                    <dd>
-                        <ol>
-                            <li>Java, Spring framework, JDBC, Oracle</li>
-                            <li>Html, CSS, JavaScript</li>
-                            <li>Hard working and confident</li>
-                            <li>Adapts easily to new environments</li>
-                            <li>Quick learner</li>
-                            <li>Delicate and High concentration</li>
-                            <li>Good teamwork</li>
-                        </ol>
-                    </dd>
-                </dl>
-            </section>
-            
-            <section>
-                <h4>Courses</h4>
-                <table border="1">
+                <h3>Courses</h3>
+                <table>
                     <tr>
                         <th>Course name</th>
                         <th>Course number</th>
@@ -126,9 +123,10 @@
                 </table>
             </section>
         </section>
+        <hr>
         
-        
-        <section>
+        <article>
+            <h3>Login Page</h3>
             <form action="#" name="login-form">
                 <fieldset>
                     <legend>user Profile</legend>
@@ -153,22 +151,17 @@
                                 <input type="number" id="age" name="age" min="18" max="65" placeholder="age"><br>
                             </td>
                         </tr>
-                        <tr>
-                            <td colspan="3">
-                                <button type="reset" id="reset" name="reset">reset</button>
-                                <button type="submit" id="submit" name="submit">submit</button>
-                            </td>
-                        </tr>
-                    </table>        
-                </fieldset>
-                
+                    </table>
+                    <button type="reset" id="reset" name="reset">reset</button>
+                    <button type="submit" id="submit" name="submit">submit</button>        
+                </fieldset>                
             </form>
-        </section>
-        
+        </article>
+                
         <aside>
-            <a href="#top" id="topButton" name="topButton">top</a>
+            <a href="#top" id="topButton">top</a>
             <a href="https://google.com" target="_blank">Google</a>
-            <a href="https://github.com" target="_blank">github</a>
+            <a href="https://github.com" target="_blank">Github</a>
         </aside>
         
     </main>
@@ -176,7 +169,7 @@
         <hr>        
         <small><i>This Document was created by MINSU KIM (A01424659)</i></small>
         <figure>
-            <img src="https://dummyimage.com/4*4/0055A4/ffffff.jpg&text=MK">
+            <img src="https://dummyimage.com/4*4/0055A4/ffffff.jpg&text=MK" alt="MK">
         </figure>
     </footer>
 </body>
