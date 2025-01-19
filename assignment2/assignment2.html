@@ -5,40 +5,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/assignment2.css">
+
+    <style>
+        /* Universal selector */
+        @font-face {  /* font */
+            font-family: 'CookieRun-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /**{
+            font-family: 'CookieRun-Regular';
+        }*/
+
+        /* id selector */
+        #content{
+            background-color: lightgray;
+        }
+        /* element selector */
+        header{
+            text-align: center;
+            background-color: #0055A4;
+            color: white;
+        }
+        th {
+            font-size: small;
+        }
+        td {
+            font-size: small;
+        }
+        a {
+            text-decoration: none;
+        }
+        table {
+            border: 1px solid black;
+        }
+        /*class selector*/
+        .footer{
+            text-align: center;
+            background-color: #0055A4;
+            color: white;
+        }
+        /* Pseudo selectors */
+        a:hover{
+            font-size: larger;
+        }
+        table
+        
+    </style>
 </head>
 <body>
-    <header>
-
+    <header class="header">
+        <h2>BCIT CST Term 1 Reminder</h2>
     </header>
 
-    <div>
-        <ul>
-            <li></li>
-        </ul>
-        <ol>
-            <li></li>
-        </ol>
-        <table>
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
+    <div id="content">
+        <section class="course">
+            <h3>Course Evaluation Criteria</h3>
+            <ol>
+                <li>
+                    <b>COMM 1116</b> Business Communications 1<br/>
+                    <a href="https://www.bcit.ca/outlines/20251072588/" target="_blank">
+                        Outline
+                    </a>
+                    <p>
+                        <small>
+                            <b>Chapter quizzes</b> <i>20%</i><br/>
+                            <b>Email assignment</b> <i>20%</i><br/>
+                            <b>Take-home informal report</b> <i>30%</i><br/>
+                            <b>Oral presentation</b> <i>20%</i> <br/>
+                            <b>Attendance & professionalism</b> <i>10%</i>
+                        </small>                        
+                    </p>
+                </li>
+                <li>
+                    <b>COMP 1110</b> CST Program Fundamentals<br/>
+                    <a href="https://www.bcit.ca/outlines/20251048057/" target="_blank">
+                        Outline
+                    </a>
+                    <p>
+                        <span>
+                            <small>
+                                <b>Learning Plan</b> : Students will ceate a learning plan to help 
+                                them navigate their courses at CST Diploma
+                                <i>Pass/fail</i> grading scheme.<br/> No numerical grade.
+                                <br/><br/>
+                                <b>Attendance</b> : Due to the nature of the course, 
+                                attendance is crucial to achieve the learning outcomes of the course.<br/> 
+                                Unapproved absence of <i>2 or more</i> classes may result in failure or 
+                                forced withdrawal from the course or program.
+                            </small>
+                           
+                        </span>    
+                    </p>
+
+                </li>
+                <li>
+                    <b>COMP 1113</b> Applied Mathematics<br/>
+                    <a href="https://www.bcit.ca/outlines/20251048068/" target="_blank">
+                        Outline
+                    </a>
+                    <p>
+                        <small>                          
+                            <b>Quiz</b> <i>22%</i><br/>
+                            <b>Online Assignments</b> <i>18%</i><br/>
+                            <b>Midterm Exam</b> <i>25%</i><br/>
+                            <b>Final Exam</b> <i>35%</i>
+                        </small>                        
+                    </p>
+                </li>
+                <li>
+                    <b>COMP 1510</b> Programming Methods<br/>
+                    <a href="https://www.bcit.ca/outlines/20251048058/" target="_blank">
+                        Outline
+                    </a>
+                    <p>
+                        <small>
+                            <b>Assignments</b> <i>15%</i><br/>
+                            <b>Lab quizzes/assignments</b> <i>15%</i><br/>
+                            <b>Midterm Exam</b> <i>25%</i><br/>
+                            <b>Final Exam</b> <i>40%</i><br/>
+                            <b>Participation</b> <i>5%</i><br/><br/>
+                            The student <b>must pass the combination of 
+                            the midterm and final</b> to pass the course.
+                        </small>                        
+                    </p>
+                </li>
+                <li>
+                    <b>COMP 1537</b> Web Development 1<br/>
+                    <a href="https://www.bcit.ca/outlines/20251087560/" target="_blank">
+                        Outline
+                    </a>
+                    <p>
+                        <small>
+                            <b>Assignments</b> <i>40%</i><br/>
+                            <b>Midterm Exam</b> <i>20%</i><br/>
+                            <b>Final Exam</b> <i>40%</i><br/><br/>
+                            To pass the course, <b>average of midterm and 
+                            final exams must be <i>50% or higher</i>.</b>
+                        </small>                        
+                    </p>
+                </li>
+                <li>
+                    <b>COMP 1712</b> Biz Analysis and System Design<br/>
+                    <a href="https://www.bcit.ca/outlines/20251086105/" target="_blank">
+                        Outline
+                    </a>
+                    <p>
+                        <small>
+                            <b>Activities</b> <i>20%</i><br/>
+                            <b>Midterm Exam</b> <i>40%</i><br/>
+                            <b>Final Exam</b> <i>40%</i><br/><br/>
+                            <b>A combined average of <i>50% or more</i> for midterm and 
+                            final exams</b> is required to pass this course.
+                        </small>                        
+                    </p>
+                </li>
+                <li>
+                    <b>COMP 1800</b> Project 1<br/>
+                    <a href="https://www.bcit.ca/outlines/20251087568/" target="_blank">
+                        Outline
+                    </a>
+                    <p>
+                        <small>
+                            <b>Active Learning Assessments</b> <i>20%</i><br/>
+                            <b>Individual Assignments</b> <i>20%</i><br/>
+                            <b>Team Assignments</b> <i>25%</i><br/>
+                            <b>Individual Final Project Deiverable</b> <i>15%</i><br/>
+                            <b>Team Final Project Deliveralbe</b> <i>20%</i><br/>
+                        </small>                        
+                    </p>
+                </li>
+            </ol>
+        </section>
+        
+        <section class="due-date">
+            <h3>Due Date</h3>
+            <ul>
+                <li>
+                    <h5>Monday</h5>
+                    <p>
+                        <small>
+                            Comp 1116 Assignment(<i>in class</i>)<br/>
+                            Comp 1537 Assignment(<i>at home</i>)<br/>
+                            Comp 1712 Assignment(<i>in class</i>)<br/>
+                            Comp 1800 Quiz(at home)
+                        </small>
+                    </p>
+                </li>
+                <li>
+                    <h5>TuesDay</h5>
+                    <p>
+                        <small>
+                            Comp 1113 Quiz(<i>in class</i>)<br/>
+                            Comp 1800 Individual Assignment(<i>at home</i>)<br/>
+                            Comp 1800 Team Assignment(<i>at home</i>)
+                        </small>
+                    </p>
+                </li>
+                <li>
+                    <h5>Thursday</h5>
+                    <p>
+                        <small>
+                            Comp 1510 Quiz(<i>in class</i>)
+                        </small>                        
+                    </p>
+                </li>
+                <li>
+                    <h5>Friday</h5>
+                    <p>
+                        <small>
+                            Comm 1116 Email & Report(<i>at home</i>)<br/>
+                            Comp 1510 Lab Assignment(<i>at home</i>)
+                        </small>                        
+                    </p>
+                </li>
+                <li>
+                    <h5>Saturday</h5>
+                    <p>
+                        <small>
+                            Comm 1116 Quiz(<i>at home</i>)
+                        </small>                        
+                    </p>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="to-do-list">
+            <h3>To-do List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Due date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>COMP1537 Lab2</td>
+                        <td>Jan 20, 23:59</td>
+                        <td>Done</td>
+                    </tr>
+                    <tr>
+                        <td>COMP1510 Lab2</td>
+                        <td>Jan 24 23:59</td>
+                        <td>Not started</td>
+                    </tr>
+                </tbody>           
+            </table>
+        </section>
+        
     </div>
-
-    <footer>
-
+    
+    <footer class="footer">
+        <small><i>This Document was created by MINSU KIM (A01424659)</i></small>
     </footer>
 </body>
 </html>
