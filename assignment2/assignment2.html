@@ -14,7 +14,9 @@
             font-weight: normal;
             font-style: normal;
         }
-
+        *{
+            margin: 0;
+        }
         /**{
             font-family: 'CookieRun-Regular';
         }*/
@@ -37,6 +39,7 @@
         }
         a {
             text-decoration: none;
+            color:#0055A4;
         }
         table {
             border: 1px solid black;
@@ -47,11 +50,32 @@
             background-color: #0055A4;
             color: white;
         }
+        /* Attribute selectors */
+        section[class ~= course]{
+            background-color: white;
+            color: #0055A4;
+        }
+        section[class ^= due]{
+            background-color: #0055A4;
+            color: white;
+        }
+        section[class $= list]{
+            background-color: white;
+        }
+
+
         /* Pseudo selectors */
         a:hover{
             font-size: larger;
         }
-        table
+        tr:nth-of-type(2n){
+            background-color: #0055A4;
+            color: white;
+        }
+        tr:nth-of-type(2n-1){
+            background-color: white;
+            color: #0055A4;
+        }
         
     </style>
 </head>
@@ -234,26 +258,22 @@
         
         <section class="to-do-list">
             <h3>To-do List</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Task</th>
-                        <th>Due date</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>COMP1537 Lab2</td>
-                        <td>Jan 20, 23:59</td>
-                        <td>Done</td>
-                    </tr>
-                    <tr>
-                        <td>COMP1510 Lab2</td>
-                        <td>Jan 24 23:59</td>
-                        <td>Not started</td>
-                    </tr>
-                </tbody>           
+            <table class="table">                
+                <tr>
+                    <th>Task</th>
+                    <th>Due date</th>
+                    <th>Status</th>
+                </tr>                        
+                <tr>
+                    <td>COMP1537 Lab2</td>
+                    <td>Jan 20, 23:59</td>
+                    <td>Done</td>
+                </tr>
+                <tr>
+                    <td>COMP1510 Lab2</td>
+                    <td>Jan 24 23:59</td>
+                    <td>Not started</td>
+                </tr>                          
             </table>
         </section>
         
